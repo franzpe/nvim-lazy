@@ -35,7 +35,6 @@ return {
       -- opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "copilot" } }))
 
       -- Configure <TAB> like in VSCode
-      -- This is reaaaally not easy to setup :D
       opts.mapping = vim.tbl_extend("force", opts.mapping, {
         ["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
         ["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
