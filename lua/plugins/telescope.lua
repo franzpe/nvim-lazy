@@ -12,7 +12,6 @@ return {
       layout_strategy = "vertical",
       layout_config = { prompt_position = "top", vertical = { width = 0.6 } },
       sorting_strategy = "ascending",
-      winblend = 10,
     },
   },
 }
