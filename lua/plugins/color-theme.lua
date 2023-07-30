@@ -4,6 +4,8 @@ vim.api.nvim_create_autocmd("ColorScheme", {
   pattern = "nightfly",
 
   callback = function()
+    local white = "#c3ccdc"
+
     vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#081e2f" })
     vim.api.nvim_set_hl(0, "LazyNormal", { bg = "NONE" })
     vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#ffffff" })
@@ -17,6 +19,11 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     -- neotree
     vim.api.nvim_set_hl(0, "NeoTreeDotfile", { fg = "#7c8f8f" })
     vim.api.nvim_set_hl(0, "NeoTreeGitUntracked", { fg = "#e3d18a" })
+
+    -- alpha
+    vim.api.nvim_set_hl(0, "AlphaHeader", { fg = "#f78c6c" })
+    vim.api.nvim_set_hl(0, "AlphaButtons", { fg = white })
+    vim.api.nvim_set_hl(0, "AlphaFooter", { fg = white })
   end,
   group = custom_highlight,
 })
