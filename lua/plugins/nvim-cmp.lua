@@ -39,11 +39,7 @@ return {
         ["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
         ["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
         ["<Tab>"] = cmp.mapping(function(fallback)
-          -- If it's a snippet then jump between fields
-          if luasnip.expand_or_jumpable() then
-            luasnip.expand_or_jump()
-          -- otherwise if the completion pop is visible then complete
-          elseif cmp.visible() then
+          if cmp.visible() then
             cmp.confirm({ select = false })
           -- if the popup is not visible then open the popup
           elseif has_words_before() then
@@ -54,14 +50,12 @@ return {
           end
         end, { "i", "s" }),
         ["<S-Tab>"] = cmp.mapping(function(fallback)
-          if cmp.visible() then
-            cmp.select_prev_item()
-          elseif luasnip.jumpable(-1) then
-            luasnip.jump(-1)
+          if luasnip.expand_or_jumpable() then
+            luasnip.expand_or_jump()
           else
             fallback()
           end
-        end, { "i", "s" }),
+        end),
       })
     end,
   },
