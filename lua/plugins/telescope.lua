@@ -9,7 +9,8 @@ return {
           ["<C-q>"] = require("telescope.actions").send_selected_to_qflist + require("telescope.actions").open_qflist, -- send selected to quickfixlist
         },
       },
-      layout_config = { prompt_position = "top" },
+      layout_strategy = "vertical",
+      layout_config = { prompt_position = "top", vertical = { width = 0.6 } },
       sorting_strategy = "ascending",
       winblend = 10,
     },
