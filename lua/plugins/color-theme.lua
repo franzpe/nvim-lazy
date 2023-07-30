@@ -15,7 +15,8 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     vim.api.nvim_set_hl(0, "NotifyBackground", { bg = "#000000" })
 
     -- neotree
-    vim.api.nvim_set_hl(0, "NeoTreeDotfile", { fg = "#38507a" })
+    vim.api.nvim_set_hl(0, "NeoTreeDotfile", { fg = "#7c8f8f" })
+    vim.api.nvim_set_hl(0, "NeoTreeGitUntracked", { fg = "#e3d18a" })
   end,
   group = custom_highlight,
 })
