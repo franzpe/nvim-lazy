@@ -1,2 +1,4 @@
 -- Here you can disable plugins
-return {}
+return {
+  { "akinsho/bufferline.nvim", enabled = false },
+}

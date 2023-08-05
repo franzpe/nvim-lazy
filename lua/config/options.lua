@@ -4,3 +4,5 @@
 
 vim.opt.cursorline = false
 vim.opt.iskeyword:append("-") -- consider string-string as whole word
+
+vim.opt.showtabline = 0
