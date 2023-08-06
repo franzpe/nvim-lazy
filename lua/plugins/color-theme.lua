@@ -6,7 +6,8 @@ vim.api.nvim_create_autocmd("ColorScheme", {
   callback = function()
     local white = "#c3ccdc"
 
-    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#081e2f" })
+    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE" })
+    -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#081e2f" })
     vim.api.nvim_set_hl(0, "LazyNormal", { bg = "NONE" })
     vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#ffffff" })
 
