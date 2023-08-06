@@ -30,6 +30,11 @@ return {
       local luasnip = require("luasnip")
       local cmp = require("cmp")
 
+      opts.window = {
+        completion = cmp.config.window.bordered({ scrollbar = false }),
+        documentation = cmp.config.window.bordered({ scrollbar = false }),
+      }
+
       -- Add emoji to cmp sources
       opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "emoji" } }))
       -- opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "copilot" } }))
