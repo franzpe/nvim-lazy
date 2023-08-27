@@ -5,5 +5,8 @@ return {
 
     -- auto closing
     { "windwp/nvim-ts-autotag" },
+
+    --multi cursor
+    { "mg979/vim-visual-multi" },
   },
 }
