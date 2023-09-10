@@ -42,7 +42,7 @@ return {
       }
 
       -- Add emoji to cmp sources
-      opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "emoji" } }))
+      opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "emoji" }, { name = "crates" } }))
       -- opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "copilot" } }))
 
       -- Configure <TAB> like in VSCode
